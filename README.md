@@ -4,7 +4,11 @@
  Write a solution in c# that can generate a one-time password. 
  The input should be the following two pieces information: User Id and Date time. Every generated password should be valid for up to 30 seconds.
  You are free to use a Web, API, Console or Class Library project in order to accomplish the requirement.
+ 
+ The file that specifically handles the requirement to generate a one-time password in C# can be found at backend/Service/OTPLoginService.cs.
 
+ However, if you are interested in exploring the entire project, including the implementation of the one-time password generation in a login scenario, you can check the rest.
+ 
 # Short demo
 ![](https://github.com/trutadan/bt-cc-technical-challenge/blob/main/demo.gif)
 
