@@ -23,13 +23,15 @@ If you want, you can as well change the Secure key used for JWT token generation
 
 # Frontend
 
-Change into the project directory:
+To run the React app, follow these steps:
+
+1. Change into the project directory:
 `cd .\frontend\`
 
-Install the project dependencies:
+2. Install the project dependencies:
 `npm install`
 
-Start the frontend development server:
+3. Start the frontend development server:
 `npm run dev`
 
 The frontend server should now be running by default on `http://127.0.0.1:5173/`.
