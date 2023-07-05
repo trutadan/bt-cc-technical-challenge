@@ -2,19 +2,6 @@ import axios from "axios";
 import { BACKEND_API_URL } from "../constants";
 import { LoginCredentials, RegisterCredentials } from "../models/User";
 
-export const checkEmailExists = (email: string) => {
-  return axios.get(`${BACKEND_API_URL}/users/email-exists/?email=${email}`, {
-    withCredentials: true,
-  });
-};
-
-export const checkUsernameExists = (username: string) => {
-  return axios.get(
-    `${BACKEND_API_URL}/users/username-exists/?username=${username}`,
-    { withCredentials: true }
-  );
-};
-
 export const register = (formData: RegisterCredentials) => {
   return axios.post(`${BACKEND_API_URL}/register/`, formData, {
     withCredentials: true,

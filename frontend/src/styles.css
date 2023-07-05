@@ -1,0 +1,81 @@
+.verify-otp-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.timer-circle {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+}
+
+.timer-circle-background {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 6;
+}
+
+.timer-circle-progress {
+  fill: none;
+  stroke: #54c8ff;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-dasharray: 0;
+  transition: stroke-dasharray 1s linear;
+}
+
+.timer-text {
+  font-size: 24px;
+  fill: #333;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+.otp-input-container {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #54c8ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+.verify-otp-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.verify-otp-container p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.Toastify__toast-container {
+  width: 300px;
+}
+
+.qrcode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}

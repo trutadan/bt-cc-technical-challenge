@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dan\\Desktop\\technical-challenge\\technical-challenge.csproj": {}
+    "C:\\Users\\Dan\\Desktop\\bt-cc-technical-challenge\\backend\\technical-challenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dan\\Desktop\\technical-challenge\\technical-challenge.csproj": {
+    "C:\\Users\\Dan\\Desktop\\bt-cc-technical-challenge\\backend\\technical-challenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dan\\Desktop\\technical-challenge\\technical-challenge.csproj",
+        "projectUniqueName": "C:\\Users\\Dan\\Desktop\\bt-cc-technical-challenge\\backend\\technical-challenge.csproj",
         "projectName": "technical-challenge",
-        "projectPath": "C:\\Users\\Dan\\Desktop\\technical-challenge\\technical-challenge.csproj",
+        "projectPath": "C:\\Users\\Dan\\Desktop\\bt-cc-technical-challenge\\backend\\technical-challenge.csproj",
         "packagesPath": "C:\\Users\\Dan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dan\\Desktop\\technical-challenge\\obj\\",
+        "outputPath": "C:\\Users\\Dan\\Desktop\\bt-cc-technical-challenge\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

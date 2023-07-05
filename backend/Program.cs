@@ -51,6 +51,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 
+app.UseCookiePolicy();
 app.UseAuthorization();
 
 app.MapControllers();

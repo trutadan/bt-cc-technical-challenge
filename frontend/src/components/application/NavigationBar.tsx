@@ -54,7 +54,7 @@ const NavigationBar = () => {
   const handleLogout = () => {
     logout();
 
-    localStorage.removeItem("user");
+    localStorage.removeItem("username");
     localStorage.removeItem("expiration");
     setAuth({});
 
@@ -67,7 +67,7 @@ const NavigationBar = () => {
         <Link to="/" style={styles.logo}>
           <img src={logo} alt="Logo" height="40" />
         </Link>
-        {auth.user ? (
+        {auth.username ? (
           <div>
             <Button
               id="composition-button"
@@ -83,7 +83,7 @@ const NavigationBar = () => {
               }}
               sx={{ borderRadius: 0 }}
             >
-              {auth.user}
+              {auth.username}
             </Button>
             <Popup
               role={undefined}

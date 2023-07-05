@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Omi4kDUtxay5AeO+OHL/+59gZaZ0xci6JEjdRgFt6xpBCq0LYmrDaXMvnlEzmq/DOZWFAAQ1FoTwHIiLi0xvKw==",
+  "dgSpecHash": "lGzHQkuhYc8pHfren0CrCeMYydaTwvVrYgN6GFJgIxjZk7splqtL5/2OnMIm6FHSbp+WL3DCMgZulp0lNuE37A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dan\\Desktop\\technical-challenge\\technical-challenge.csproj",
+  "projectFilePath": "C:\\Users\\Dan\\Desktop\\bt-cc-technical-challenge\\backend\\technical-challenge.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dan\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",
     "C:\\Users\\Dan\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

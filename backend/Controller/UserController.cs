@@ -52,7 +52,9 @@ namespace technical_challenge.Controller
                 // Store user ID in a cookie
                 Response.Cookies.Append("userId", user.Id.ToString(), new CookieOptions
                 {
-                    HttpOnly = true
+                    HttpOnly = true,
+                    SameSite = SameSiteMode.None,
+                    Secure = true
                 });
 
                 return Ok(new
@@ -63,35 +65,6 @@ namespace technical_challenge.Controller
             catch (RepositoryException exception)
             {
                 return BadRequest(new { message = exception.Message });
-            }
-        }
-
-        [HttpGet("username")]
-        public async Task<IActionResult> GetUsername()
-        {
-            try
-            {
-                var jwt = Request.Cookies["jwt"];
-
-                var token = _jwtService.Verify(jwt);
-
-                int userId = int.Parse(token.Issuer);
-
-                var user = await _repository.GetUserById(userId);
-
-                return Ok(new 
-                { 
-                    message = "success",
-                    username = user.Username
-                });
-            }
-            catch (RepositoryException exception)
-            {
-                return BadRequest(new { message = exception.Message });
-            }
-            catch (Exception)
-            {
-                return Unauthorized();
             }
         }
 
@@ -142,23 +115,54 @@ namespace technical_challenge.Controller
                     return BadRequest(new { message = "Invalid OTP provided!" });
                 }
 
-                var jwt = _jwtService.Generate(user.Id);
+                var (jwt, expiration) = _jwtService.Generate(user.Id);
 
                 Response.Cookies.Append("jwt", jwt, new CookieOptions
                 {
-                    HttpOnly = true
+                    HttpOnly = true,
+                    SameSite = SameSiteMode.None,
+                    Secure = true
                 });
 
                 return Ok(new
                 {
                     message = "success",
                     username = user.Username,
-                    jwt = jwt
+                    expiration = DateTime.Today.AddDays(1)
                 });
             }
             catch (RepositoryException exception)
             {
                 return BadRequest(new { message = exception.Message });
+            }
+        }
+
+        [HttpGet("username")]
+        public async Task<IActionResult> GetUsername()
+        {
+            try
+            {
+                var jwt = Request.Cookies["jwt"];
+
+                var token = _jwtService.Verify(jwt);
+
+                int userId = int.Parse(token.Issuer);
+
+                var user = await _repository.GetUserById(userId);
+
+                return Ok(new
+                {
+                    message = "success",
+                    username = user.Username
+                });
+            }
+            catch (RepositoryException exception)
+            {
+                return BadRequest(new { message = exception.Message });
+            }
+            catch (Exception)
+            {
+                return Unauthorized();
             }
         }
 
