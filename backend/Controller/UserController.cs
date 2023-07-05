@@ -169,7 +169,14 @@ namespace technical_challenge.Controller
         [HttpPost("logout")]
         public IActionResult Logout()
         {
-            Response.Cookies.Delete("jwt");
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                SameSite = SameSiteMode.None,
+                Secure = true
+            };
+
+            Response.Cookies.Delete("jwt", cookieOptions);
 
             return Ok(new
             {
