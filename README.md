@@ -33,3 +33,6 @@ Start the frontend development server:
 `npm run dev`
 
 The frontend server should now be running by default on `http://127.0.0.1:5173/`.
+
+**_NOTE:_**
+If you want to modify the IP address of the backend, you can update the DEV_BACKEND_API_URL constant from the `constants.tsx` file, to reflect the desired IP address and port of your backend server.
