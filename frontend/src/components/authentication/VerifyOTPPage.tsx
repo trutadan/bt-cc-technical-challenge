@@ -105,7 +105,11 @@ const VerifyOTPPage = () => {
           value={inputOTP}
           onChange={(e) => setInputOTP(e.target.value)}
           autoComplete="off"
-          style={{ background: "transparent", border: "1px solid grey" }}
+          style={{
+            background: "transparent",
+            border: "1px solid grey",
+            color: "black",
+          }}
         />
         <Button
           onClick={handleVerifyOTP}

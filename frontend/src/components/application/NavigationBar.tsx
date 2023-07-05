@@ -15,6 +15,7 @@ const Popup = styled(Popper)({
 const styles = {
   logo: {
     marginRight: "auto",
+    alignItems: "center",
   },
   lists: {
     display: "flex",
